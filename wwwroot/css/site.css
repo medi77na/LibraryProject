@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 html {
   font-size: 14px;
 }
@@ -19,4 +21,15 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+#navcolor{
+  background-color:#ECEBEA;
+}
+
+.btns{
+  background-color: #53B3CB;
+  border: none;
+  color: white;
+  padding: 10px 20px;
 }
