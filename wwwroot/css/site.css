@@ -63,11 +63,23 @@ body {
 #navcolor {
   background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  backdrop-filter: blur(1px); 
+  backdrop-filter: blur(1px);
+}
+
+#background {
+  background-image: url(https://files.vlad.studio/joy/googlelibrary/preview/1600x2560.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: auto; /* Deja que el navegador elija el método de renderizado adecuado (por defecto) */
+  image-rendering: crisp-edges; /* Mantiene bordes nítidos al escalar (útil para gráficos pixelados) */
+  image-rendering: pixelated; /* Amplía los píxeles para evitar difuminado (útil para gráficos pixelados) */
+}
+
+#nav-search-books {
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .inputs {
   background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  backdrop-filter: blur(1px);
 }
