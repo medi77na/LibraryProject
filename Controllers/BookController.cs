@@ -24,13 +24,26 @@ namespace LibraryProject.Controllers
             return View();
         }
 
-<<<<<<< HEAD
         [HttpGet("SearchBooks")]
         public IActionResult SearchBooks()
-=======
-         [HttpGet("ShowBooks")]
+        {
+            return View();
+        }
+
+        [HttpGet("ShowBooks")]
         public IActionResult ShowBooks()
->>>>>>> e0ac24a4498f7bd1863fd31b96e080af37c01cea
+        {
+            return View();
+        }
+
+        [HttpGet("AllBooksReserved")]
+        public IActionResult AllBooksReserved()
+        {
+            return View();
+        }
+
+        [HttpGet("HistoryBooksReserved")]
+        public IActionResult HistoryBooksReserved()
         {
             return View();
         }
