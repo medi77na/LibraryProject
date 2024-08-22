@@ -52,12 +52,7 @@ body {
 }
 
 /*configuraciones de los botones*/
-.btns{
-  background-color: var(--blue);
-  border: none;
-  color: var(--white);
-  padding: 10px 20px;
-}
+
 
 /*Color del nav con desenfoque*/
 #navcolor {
