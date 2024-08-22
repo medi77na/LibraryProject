@@ -24,6 +24,12 @@ namespace LibraryProject.Controllers
             return View();
         }
 
+         [HttpGet("ShowBooks")]
+        public IActionResult ShowBooks()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

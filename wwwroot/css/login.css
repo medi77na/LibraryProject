@@ -89,7 +89,7 @@
   }
   
   .button1:hover {
-    background-color: black;
+    background-color: blue;
     color: white;
   }
   
@@ -106,7 +106,7 @@
   }
   
   .button2:hover {
-    background-color: black;
+    background-color: green;
     color: white;
   }
   
