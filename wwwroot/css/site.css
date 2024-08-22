@@ -10,7 +10,10 @@
 :root{
   --white: #ffffff;
   --black: #000000;
+  --beige:#c69c69;
   --blue: #396EEB;
+  --green: #1fb264;
+  --red:#ff0000;
 
 }
 
@@ -48,15 +51,17 @@ body {
   background-color:#ECEBEA;
 }
 
+/*configuraciones de los botones*/
 .btns{
-  background-color: #396eeb;
+  background-color: var(--blue);
   border: none;
-  color: white;
+  color: var(--white);
   padding: 10px 20px;
 }
 
+/*Color del nav con desenfoque*/
 #navcolor {
   background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-  backdrop-filter: blur(1px); /* Efecto de desenfoque de fondo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  backdrop-filter: blur(1px); 
 }
