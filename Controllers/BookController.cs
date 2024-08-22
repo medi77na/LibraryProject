@@ -42,6 +42,12 @@ namespace LibraryProject.Controllers
             return View();
         }
 
+        [HttpGet("HistoryBooksReserved")]
+        public IActionResult HistoryBooksReserved()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
