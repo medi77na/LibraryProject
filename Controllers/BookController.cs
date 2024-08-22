@@ -23,6 +23,12 @@ namespace LibraryProject.Controllers
             return View();
         }
 
+        [HttpGet("SearchBooks")]
+        public IActionResult SearchBooks()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
