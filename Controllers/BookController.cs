@@ -29,9 +29,21 @@ namespace LibraryProject.Controllers
         {
             return View();
         }
-        
+
         [HttpGet("ShowBooks")]
         public IActionResult ShowBooks()
+        {
+            return View();
+        }
+
+        [HttpGet("AllBooksReserved")]
+        public IActionResult AllBooksReserved()
+        {
+            return View();
+        }
+
+        [HttpGet("HistoryBooksReserved")]
+        public IActionResult HistoryBooksReserved()
         {
             return View();
         }

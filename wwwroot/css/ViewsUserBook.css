@@ -71,3 +71,9 @@
     color: black;
     transform: rotateY(180deg);
 }
+
+@media (max-width: 767px) {
+    #navcolor h1 {
+        display: none;
+    }
+}
