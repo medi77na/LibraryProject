@@ -28,6 +28,12 @@ namespace LibraryProject.Controllers
         {
             return View();
         }
+
+        [HttpGet("Register")]
+        public IActionResult Register()
+        {
+            return View();
+        }
         
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
