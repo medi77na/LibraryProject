@@ -12,7 +12,7 @@ public partial class Person
     public string TypeOfDocument { get; set; } = null!;
 
     public string DocumentNumber { get; set; } = null!;
-
+ 
     public string Password { get; set; } = null!;
 
     public string Address { get; set; } = null!;

@@ -17,12 +17,16 @@
 
 }
 
+<<<<<<< HEAD
 .back {
   background-image: url('https://tse4.mm.bing.net/th?id=OIG2.svtMVCW7sziF4G0r_q0d&pid=ImgGn');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+=======
+
+>>>>>>> e0ac24a4498f7bd1863fd31b96e080af37c01cea
 
 html {
   font-size: 14px;

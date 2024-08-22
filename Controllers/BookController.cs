@@ -24,8 +24,13 @@ namespace LibraryProject.Controllers
             return View();
         }
 
+<<<<<<< HEAD
         [HttpGet("SearchBooks")]
         public IActionResult SearchBooks()
+=======
+         [HttpGet("ShowBooks")]
+        public IActionResult ShowBooks()
+>>>>>>> e0ac24a4498f7bd1863fd31b96e080af37c01cea
         {
             return View();
         }
