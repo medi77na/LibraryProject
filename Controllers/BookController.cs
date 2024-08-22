@@ -18,7 +18,8 @@ namespace LibraryProject.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult CrudBooks()
         {
             return View();
         }
