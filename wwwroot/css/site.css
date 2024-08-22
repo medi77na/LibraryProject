@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap");
 
 /*Feunte del texto*/
+
 * {
   font-family: 'Familjen Grotesk', sans-serif;
 }
@@ -11,8 +12,10 @@
   --white: #ffffff;
   --black: #000000;
   --beige: #c69c69;
+  --beige: #c69c69;
   --blue: #396EEB;
   --green: #1fb264;
+  --red: #ff0000;
   --red: #ff0000;
 
 }
@@ -34,6 +37,8 @@ html {
   }
 }
 
+
+
 .btn:focus,
 .btn:active:focus,
 .btn-link.nav-link:focus,
@@ -54,7 +59,6 @@ body {
 #navcolor {
   background-color: #ECEBEA;
 }
-
 /*Color del nav con desenfoque*/
 #navcolor {
   background-color: rgba(255, 255, 255, 0.8);
