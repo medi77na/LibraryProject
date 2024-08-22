@@ -2,22 +2,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap");
 
 /*Feunte del texto*/
-*{
+* {
   font-family: 'Familjen Grotesk', sans-serif;
 }
 
 /*Paleta de colores*/
-:root{
+:root {
   --white: #ffffff;
   --black: #000000;
-  --beige:#c69c69;
+  --beige: #c69c69;
   --blue: #396EEB;
   --green: #1fb264;
-  --red:#ff0000;
+  --red: #ff0000;
 
 }
 
+<<<<<<< HEAD
+.back {
+  background-image: url('https://tse4.mm.bing.net/th?id=OIG2.svtMVCW7sziF4G0r_q0d&pid=ImgGn');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+=======
 
+>>>>>>> e0ac24a4498f7bd1863fd31b96e080af37c01cea
 
 html {
   font-size: 14px;
@@ -29,7 +38,11 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
@@ -45,10 +58,9 @@ body {
 #navcolor{
   background-color:#ECEBEA;
 }
-
 /*Color del nav con desenfoque*/
 #navcolor {
   background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  backdrop-filter: blur(1px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
 }
