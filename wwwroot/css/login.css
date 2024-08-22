@@ -76,8 +76,13 @@
 }
 
 .img-login {
-  height: auto;
-  max-height: 200px;
+  background-color: var(--gray);
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 2rem;
+  height: 442px;
+  width: auto;
 }
 
 
