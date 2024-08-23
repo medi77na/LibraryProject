@@ -7,6 +7,7 @@ using LibraryProject.Database;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using LibraryProject.Models;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace LibraryProject.Controllers
@@ -29,6 +30,14 @@ namespace LibraryProject.Controllers
         {
             return View();
         }
+
+         [HttpGet("Users")]
+        public async Task<IActionResult> Users()
+        {
+            var persons = await _context.Persons.ToListAsync();
+            return View(persons);
+        }
+
 
         [HttpGet("Login")]
         public IActionResult Login()

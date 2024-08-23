@@ -23,7 +23,7 @@ namespace LibraryProject.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
+        [HttpGet("CrudBooks")]
         public IActionResult CrudBooks()
         {
             return View();
@@ -35,12 +35,7 @@ namespace LibraryProject.Controllers
             return View();
         }
 
-        [HttpGet("ShowBooks")]
-        public async Task<IActionResult> ShowBooks()
-        {
-            var books = await _context.Books.ToListAsync();
-            return View(books);
-        }
+    
 
 
         [HttpGet("AllBooksReserved")]
@@ -48,6 +43,14 @@ namespace LibraryProject.Controllers
         {
             return View();
         }
+
+           [HttpGet("ShowBooks")]
+        public async Task<IActionResult> ShowBooks()
+        {
+            var books = await _context.Books.ToListAsync();
+            return View(books);
+        }
+
 
         [HttpGet("HistoryBooksReserved")]
         public IActionResult HistoryBooksReserved()
