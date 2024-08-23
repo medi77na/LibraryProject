@@ -1,12 +1,14 @@
+@model IEnumerable<LibraryProject.Models.Book>
 @{
-  ViewData["Title"] = "History Of Books Borrowed";
+  ViewData["Title"] = "Available Books";
 }
 <link rel="stylesheet" href="~/css/ViewsUserBook.css" asp-append-version="true" />
 
 <body id="background">
-  <header class=" rounded-pill d-flex align-items-center justify-content-center justify-content-md-between mt-3"
+
+  <header class="rounded-pill d-flex align-items-center justify-content-center justify-content-md-between mt-3"
     id="navcolor">
-    <a href="#" class="d-flex align-items-center mb-2 mt-2 text-decoration-none gap-3">
+    <a asp-area="" asp-controller="Home" asp-action="Index" class="d-flex align-items-center mb-2 mt-2 text-decoration-none gap-3">
       <svg class="ms-4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100"
         height="100">
         <path transform="scale(0.15625 0.15625)"
@@ -29,17 +31,13 @@
     </a>
 
     <div class="d-flex justify-content-center me-4 gap-3 mt-2 mb-2">
-      <a href="~/Book/SearchBooks" asp-append-version="true"><button type="button" class="btn btn-dark rounded-pill fs-5">Get out</button></a>
-      <a href="~/Book/AllBooksReserved" asp-append-version="true"><button type="button" class="btn btn-dark rounded-pill fs-5">Books borrowed</button></a>
+      <a asp-area="" asp-controller="Book" asp-action="SearchBook"><button type="button" class="btn btn-dark rounded-pill fs-5">Search Book</button></a>
+      <a asp-area="" asp-controller="Book" asp-action="BooksBorrowed"><button type="button" class="btn btn-dark rounded-pill fs-5">Books borrowed</button></a>
     </div>
   </header>
-  <main>
-    <div class="input-group flex-nowrap mt-5">
-      <input type="text" class="form-control rounded-pill" placeholder="Enter the name of the book"
-        aria-label="Enter the name of the book" aria-describedby="addon-wrapping">
-    </div>
 
-    <section class="mt-5 d-flex align-items-center justify-content-center">
+  <main>
+    <section class="mt-5 d-flex align-items-center justify-content-center flex-wrap gap-5">
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
@@ -51,9 +49,56 @@
             <p>9-123-569463210</p>
             <p>Category:</p>
             <p>Romance</p>
+            <button class="btn-success ">Available</button>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <p class="title">DEJA DE SER TU</p>
+            <p>Joe Dispenza</p>
+          </div>
+          <div class="flip-card-back">
+            <p>ISBN:</p>
+            <p>9-123-569463210</p>
+            <p>Category:</p>
+            <p>Romance</p>
+            <button class="btn-success ">Available</button>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <p class="title">DEJA DE SER TU</p>
+            <p>Joe Dispenza</p>
+          </div>
+          <div class="flip-card-back">
+            <p>ISBN:</p>
+            <p>9-123-569463210</p>
+            <p>Category:</p>
+            <p>Romance</p>
+            <button class="btn-success ">Available</button>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <p class="title">DEJA DE SER TU</p>
+            <p>Joe Dispenza</p>
+          </div>
+          <div class="flip-card-back">
+            <p>ISBN:</p>
+            <p>9-123-569463210</p>
+            <p>Category:</p>
+            <p>Romance</p>
+            <button class="btn-success ">Available</button>
           </div>
         </div>
       </div>
     </section>
   </main>
+
 </body>
