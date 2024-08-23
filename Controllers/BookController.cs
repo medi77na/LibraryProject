@@ -37,8 +37,8 @@ namespace LibraryProject.Controllers
         }
 
 
-        [HttpGet("AllBooksReserved")]
-        public IActionResult AllBooksReserved()
+        [HttpGet("SearchBook")]
+        public IActionResult SearchBook()
         {
             return View();
         }
