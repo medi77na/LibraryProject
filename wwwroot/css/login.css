@@ -56,8 +56,10 @@
 
 .form:hover {
   transform: scale(1.05);
-  border: 1px solid black;
+  border: 1px solid var(--black);
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5); /* Sombra blanca */
 }
+
 
 @media (max-width: 768px) {
   .gap-form {
@@ -124,23 +126,23 @@
   padding: 0.6em;
   border: none;
   outline: none;
-  color: white;
-  background-color: #171717;
+  color: var(--white);
+  background-color: var(--black);
   box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
 }
 
 .input-icon {
   height: 1.3em;
   width: 1.3em;
-  fill: white;
+  fill: var(--white);
 }
 
 .input-field {
   background: none;
   border: none;
   outline: none;
-  width: 100%;
-  color: #d3d3d3;
+  width: 95%;
+  color: var(--white);
 }
 
 .form .btn {
@@ -160,12 +162,12 @@
   outline: none;
   transition: .4s ease-in-out;
   background-color: #252525;
-  color: white;
+  color: var(--white);
 }
 
 .button1:hover {
-  background-color: blue;
-  color: white;
+  background-color: var(--blue);
+  color: var(--white);
 }
 
 .button2 {
@@ -177,12 +179,12 @@
   outline: none;
   transition: .4s ease-in-out;
   background-color: #252525;
-  color: white;
+  color: var(--white);
 }
 
 .button2:hover {
-  background-color: green;
-  color: white;
+  background-color: var(--green);
+  color: var(--white);
 }
 
 .button3 {
@@ -193,10 +195,10 @@
   outline: none;
   transition: .4s ease-in-out;
   background-color: #252525;
-  color: white;
+  color: var(--white);
 }
 
 .button3:hover {
-  background-color: red;
-  color: white;
+  background-color: var(--red);
+  color: var(--white);
 }
