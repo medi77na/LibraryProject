@@ -29,12 +29,6 @@ namespace LibraryProject.Controllers
             return View();
         }
 
-        [HttpGet("SearchBooks")]
-        public IActionResult SearchBooks()
-        {
-            return View();
-        }
-
         [HttpGet("ShowBooks")]
         public async Task<IActionResult> ShowBooks()
         {
@@ -43,14 +37,14 @@ namespace LibraryProject.Controllers
         }
 
 
-        [HttpGet("AllBooksReserved")]
-        public IActionResult AllBooksReserved()
+        [HttpGet("SearchBook")]
+        public IActionResult SearchBook()
         {
             return View();
         }
 
-        [HttpGet("HistoryBooksReserved")]
-        public IActionResult HistoryBooksReserved()
+        [HttpGet("BooksBorrowed")]
+        public IActionResult BooksBorrowed()
         {
             return View();
         }
