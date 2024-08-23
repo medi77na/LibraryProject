@@ -43,8 +43,8 @@ namespace LibraryProject.Controllers
             return View();
         }
 
-        [HttpGet("HistoryBooksReserved")]
-        public IActionResult HistoryBooksReserved()
+        [HttpGet("BooksReserved")]
+        public IActionResult BooksReserved()
         {
             return View();
         }
