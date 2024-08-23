@@ -17,7 +17,7 @@ namespace LibraryProject.Controllers
         private readonly ILogger<PersonController> _logger;
         private readonly Bjijvrrjr8fpicdo4p4kContext _context;
 
-        [ActivatorUtilitiesConstructor]
+
         public PersonController(ILogger<PersonController> logger, Bjijvrrjr8fpicdo4p4kContext context)
         {
             _context = context; // Obtener la referencia al contexto de datos

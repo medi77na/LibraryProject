@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using LibraryProject.Database;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace LibraryProject.Controllers
@@ -11,10 +13,13 @@ namespace LibraryProject.Controllers
     [Route("[controller]")]
     public class BookController : Controller
     {
-        private readonly ILogger<BookController> _logger;
+        private readonly ILogger<PersonController> _logger;
+        private readonly Bjijvrrjr8fpicdo4p4kContext _context;
 
-        public BookController(ILogger<BookController> logger)
+
+        public BookController(ILogger<PersonController> logger, Bjijvrrjr8fpicdo4p4kContext context)
         {
+            _context = context; // Obtener la referencia al contexto de datos
             _logger = logger;
         }
 
@@ -31,10 +36,12 @@ namespace LibraryProject.Controllers
         }
 
         [HttpGet("ShowBooks")]
-        public IActionResult ShowBooks()
+        public async Task<IActionResult> ShowBooks()
         {
-            return View();
+            var books = await _context.Books.ToListAsync();
+            return View(books);
         }
+
 
         [HttpGet("AllBooksReserved")]
         public IActionResult AllBooksReserved()

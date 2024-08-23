@@ -1,3 +1,5 @@
+@model IEnumerable<LibraryProject.Models.Book>
+
 @{
     ViewData["Title"] = "Books";
 }
@@ -23,14 +25,15 @@
                 </thead>
                 <tbody>
                     <h2 class="table text-dark mt-5">Availability</h2>
-                    <tr>
-                        <td>Cien Años de Soledad</td>
-                        <td>Gabriel García Marquez</td>
-                        <td>0-306-40615-2</td>
-                        <td>Novel</td>
-
-                    </tr>
-
+                    @foreach (var book in Model)
+                    {
+                        <tr>
+                            <td>@book.Title</td>
+                            <td>@book.Author</td>
+                            <td>@book.Isbn</td>
+                            <td>@book.Category</td>
+                        </tr>
+                    }
                 </tbody>
             </table>
             <table class="table text-dark mt-5">
@@ -72,14 +75,9 @@
                         <td>Oscar Wilde</td>
                         <td>0-306-45032-4</td>
                         <td>Fiction</td>
-
                     </tr>
-
                 </tbody>
             </table>
         </section>
-
-
     </main>
-
 </body>
