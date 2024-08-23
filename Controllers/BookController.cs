@@ -29,12 +29,6 @@ namespace LibraryProject.Controllers
             return View();
         }
 
-        [HttpGet("AvailableBooks")]
-        public IActionResult AvailableBooks()
-        {
-            return View();
-        }
-
         [HttpGet("ShowBooks")]
         public async Task<IActionResult> ShowBooks()
         {
@@ -62,6 +56,12 @@ namespace LibraryProject.Controllers
             return View(books);
         }
 
+        [HttpGet("AvailableBooks")]
+        public async Task<IActionResult> AvailableBooks()
+        {
+            var books = await _context.Books.ToListAsync();
+            return View(books);
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
