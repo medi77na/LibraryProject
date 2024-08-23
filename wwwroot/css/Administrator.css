@@ -1,0 +1,31 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --beige: #c69c69;
+    --blue: #396EEB;
+    --green: #1fb264;
+    --red: #ff0000;
+  
+  }
+
+.button1, .button2{
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: #252525;
+    color: var(--white);
+    white-space: nowrap; 
+}
+
+.button1:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+
+
+.button2:hover {
+    background-color: var(--green);
+    color: var(--white);
+}
