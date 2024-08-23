@@ -54,9 +54,6 @@ namespace LibraryProject.Controllers
             return View(person);
         }
 
-
-
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
