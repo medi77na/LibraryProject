@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
-namespace LibraryProject.Database;
+namespace LibraryProject.Models;
 
 public partial class Person
 {

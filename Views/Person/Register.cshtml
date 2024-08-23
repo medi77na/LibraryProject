@@ -1,38 +1,54 @@
+@model LibraryProject.Models.Person
+
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Register";
 }
 
 <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
 
 <body class="back">
-    <header
-       
-</body>
+    <header></header>
 
-<div class="container container_form pt-5 mt-5">
-    <form class="form mt-2">
-        <p id="heading">Register</p>
-        <div class="field">
-            <input autocomplete="off" placeholder="Complete name" class="input-field" type="text">
-        </div>
-        <div class="field">
-            <input autocomplete="off" placeholder="Document type" class="input-field" type="text">
-        </div>
-                <div class="field">
-            <input autocomplete="off" placeholder="Document Number" class="input-field" type="text">
-        </div>
-                <div class="field">
-            <input autocomplete="off" placeholder="Adress" class="input-field" type="text">
-        </div>
-                <div class="field">
-            <input autocomplete="off" placeholder="Phoone number" class="input-field" type="text">
-        </div>
-        <div class="field">
-            <input placeholder="Password" class="input-field" type="password">
-        </div>
-        <div class="btn">
-            <a asp-area="" asp-controller="Person" asp-action="Login" class="button1 text-decoration-none">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-            <button class="button2">Acept</button>
-        </div>
-    </form>
-</div>
+    <div class="container container_form pt-5 mt-5">
+        <form class="form mt-2" method="post" asp-controller="Person" asp-action="Register">
+            <p id="heading">Register</p>
+
+            <div class="field">
+                <input asp-for="FullName" autocomplete="off" placeholder="Complete name" class="input-field" type="text">
+            </div>
+
+            <div class="field">
+                <select asp-for="TypeOfDocument" class="input-field">
+                    <option value="selection">SELECT A TYPE OF DOCUMENT</option>
+                    <option value="identityCard">IDENTITY CARD</option>
+                    <option value="foreignCard">FOREIGNER'S IDENTITY CARD</option>
+                    <option value="dni">DNI</option>
+                    <option value="other">OTHER</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <input asp-for="DocumentNumber" autocomplete="off" placeholder="Document Number" class="input-field" type="text">
+            </div>
+
+            <div class="field">
+                <input asp-for="Address" autocomplete="off" placeholder="Address" class="input-field" type="text">
+            </div>
+
+            <div class="field">
+                <input asp-for="PhoneNumber" autocomplete="off" placeholder="Phone number" class="input-field" type="text">
+            </div>
+
+            <input asp-for="RolesId" type="hidden" value="3">
+
+            <div class="field">
+                <input asp-for="Password" placeholder="Password" class="input-field" type="password">
+            </div>
+
+            <div class="btn">
+                <a asp-area="" asp-controller="Person" asp-action="Login" class="button1 text-decoration-none">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <button class="button2" type="submit">Accept</button>
+            </div>
+        </form>
+    </div>
+</body>
