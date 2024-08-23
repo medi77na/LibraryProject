@@ -3,18 +3,45 @@
     ViewData["Title"] = "Login";
 }
 
-<link rel="stylesheet" href="~/css/ViewsUserBook.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/Administrator.css" asp-append-version="true" />
 
 
 <body class="mt-5 text-center back text-light">
-    <header class="mt-5 text-center">
-        <h1>STATE OF BOOKS</h1>
+    <header
+        class="rounded-pill mx-5 d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mt-5"
+        id="navcolor">
+        <a asp-area="" asp-controller="Home" asp-action="Index"
+            class="d-flex align-items-center text-decoration-none mb-md-0 gap-3">
+            <svg class="ms-4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100"
+                height="100">
+                <path transform="scale(0.15625 0.15625)"
+                    d="M320.412 191.651C349.537 149.194 409.434 113.118 462.115 114.254C476.811 112.231 489.557 123.917 491.169 138.288C491.611 142.226 491.572 146.197 492.716 150.028C496.691 154.208 502.051 154.796 507.467 155.9C540.85 162.71 552.29 175.14 552.289 207.537L552.288 455.558C552.293 467.644 554.229 481.674 547.249 492.3C534.639 511.495 517.38 506.919 497.885 502.957C457.117 494.67 412.678 491.646 372.638 504.305C353.312 510.415 339.808 519.293 318.477 518.874C300.339 518.519 286.197 510.188 269.447 504.8C225.183 490.562 178.143 495.479 133.368 504.65C127.251 506.101 120.637 507.49 114.348 506.586C86.2538 502.548 87.7799 475.809 87.7938 455.03L87.7905 208.502C87.7989 179.794 96.8819 163.28 128.251 156.929C133.514 155.863 141.918 155.785 146.241 152.431C156.815 144.229 139.826 107.791 194.895 115.501C248.331 122.983 288.633 149.577 320.412 191.651ZM339.226 468.209C343.338 466.996 347.441 464.92 351.456 463.354C398.673 444.942 453.031 438.728 502.469 450.55C507.149 451.669 513.406 455.265 511.614 461.059C508.771 470.257 490.552 463.167 484.577 462.014C438.923 453.204 392.536 463.161 349.875 479.756C311.625 494.635 319.253 489.947 282.158 476.248C239.761 460.591 192.476 453.285 147.966 463.723C143.611 464.744 137.29 467.545 132.849 465.911C129.076 464.522 127.133 460.401 128.747 456.653C131.977 449.15 153.957 446.964 160.841 446.048C209.057 439.632 257.3 450.049 301.873 468.209L301.873 468.209L301.873 468.209C297.375 462.263 291.134 457.679 285.356 453.059C250.069 424.841 203.982 407.16 158.419 412.897C151.163 413.811 141.111 417.516 134.12 416.38C113.503 413.032 116.613 380.396 116.614 365.552L116.623 176.071C100.394 184.588 102.502 200.121 102.508 215.79L102.509 456.323C102.492 469.003 99.6578 492.817 118.856 492.337C123.507 492.22 128.2 490.947 132.754 490.045C179.506 480.784 226.882 476.272 272.957 490.761C288.96 495.794 304.808 505.307 322.002 504.624C337.157 504.021 351.162 496.14 365.304 491.32C411.33 475.632 458.738 481.031 505.725 489.666C541.015 496.151 538.05 484.23 538.037 456.14L538.018 232.158C538.035 209.904 542.534 197.37 529.315 178.791L529.319 376.53C529.333 390.485 530.676 417.408 509.072 417.436C503.131 417.444 497.236 414.647 491.437 413.489C441.27 403.465 380.212 427.875 344.633 462.359C342.797 464.137 340.675 466.109 339.226 468.209L339.226 468.209L339.226 468.209ZM176.19 129.046C156.807 131.219 173.105 155.688 151.44 166.281C145.091 169.385 138.033 169.672 131.544 172.241L131.546 368.376C131.539 376.629 131.01 385.227 131.752 393.439C132.86 405.696 142.827 400.546 150.768 399.041C197.052 390.268 251.172 408.728 287.95 436.36C296.659 442.846 306.541 450.197 313.032 458.984L313.032 207.007C298.122 177.129 253.285 147.285 223.02 137.16C211.253 133.223 188.308 127.778 176.19 129.046ZM462.115 129.046C418.86 130.682 375.816 151.212 346.535 182.754C341.366 188.322 330.516 200.821 327.521 207.007L327.52 370.31C327.521 399.856 327.181 429.443 327.521 458.984C334.813 448.959 349.942 438.699 360.138 431.436C400.055 404.318 450.335 390.734 498.302 399.713C502.078 400.42 505.698 401.724 509.439 402.465C517.891 397.023 514.996 388.047 515.005 379.394L515.029 194.902C515.031 187.378 515.296 179.719 514.329 172.241C500.023 167.762 479.431 170.598 476.756 147.038C475.873 139.259 475.574 124.771 462.115 129.046Z" />
+                <path transform="scale(0.15625 0.15625)"
+                    d="M265.174 229.906C260.989 227.203 257.594 223.313 253.591 220.318C236.005 207.161 215.279 200.995 193.529 200.946C189.34 200.937 184.917 201.281 180.773 200.745C169.737 199.316 170.581 186.574 185.189 185.359C211.38 184.573 257.915 196.021 274.035 218.755C278.568 225.146 271.741 231.565 265.174 229.906Z" />
+                <path transform="scale(0.15625 0.15625)"
+                    d="M381.773 224.087C377.092 228.753 365.853 235.172 365.149 224.315C364.693 217.297 376.3 209.82 381.142 206.459C401.388 192.403 422.207 187.379 446.437 185.359C451.897 185.265 462.852 183.918 466.819 188.43C470.917 193.092 468.496 200.26 462.018 200.717C457.59 201.029 453.059 200.175 448.585 200.415C424.069 201.73 400.965 207.962 381.773 224.087Z" />
+                <path transform="scale(0.15625 0.15625)"
+                    d="M267.166 295.148C263.758 294.438 261.5 291.992 259.048 289.706C241.081 272.959 217.113 265.433 192.983 264.291C188.668 264.086 180.455 265.109 176.966 263.013C169.382 258.457 175.314 250.247 182.173 249.38C209.277 248.566 236.069 254.343 258.483 270.208C263.267 273.593 274.488 281.399 275.29 287.167C275.975 292.091 271.418 294.759 267.166 295.148Z" />
+                <path transform="scale(0.15625 0.15625)"
+                    d="M381.773 289.112C367.161 303.489 361.834 289.114 368.513 281.473C387.12 260.186 419.93 251.141 447.477 249.38C452.679 249.308 461.952 248.11 465.882 251.852C468.893 254.72 469.646 259.424 466.448 262.457C462.714 266 455.74 264.202 451.04 264.157C428.154 263.939 398.722 272.706 381.773 289.112Z" />
+                <path transform="scale(0.15625 0.15625)"
+                    d="M267.166 359.292C262.118 358.444 256.209 351.424 251.933 348.262C234.754 335.56 212.661 328.69 191.441 328.426C187.919 328.382 184.155 328.704 180.669 328.293C170.035 327.04 172.577 314.633 182.173 313.516C209.82 313.335 234.769 318.217 258.02 334.427C263.741 338.416 287.048 357.145 267.166 359.292Z" />
+                <path transform="scale(0.15625 0.15625)"
+                    d="M381.773 353.571C376.573 358.722 366.424 363.154 365.502 352.758C364.934 346.355 377.296 338.453 381.615 335.395C401.861 321.062 422.914 314.951 447.477 313.516C452.007 313.402 458.123 312.756 462.474 313.791C470.981 315.814 469.754 324.802 463.352 328.384C427.601 329.847 413.076 329.52 381.773 353.571Z" />
+            </svg>
+
+            <h1 class="fs-4 text-dark">Library Project</h1>
+        </a>
+
+        <div class="d-flex justify-content-center gap-3 me-4">
+            <a asp-area="" asp-controller="Home" asp-action="Index"><button class="btn button1 fs-5">Go
+                    Home</button></a>
+            <a asp-area="" asp-controller="Book" asp-action="CrudBooks"><button
+                    class="btn button2 fs-5">Create</button></a>
+        </div>
     </header>
     <main class="mt-5 text-center text-light">
-        <p>Below you will be able to see the current status of the books</p>
-        <!--A continuación podrá ver el estado actual de los libros -->
-        <a href="/">Home</a>
-        <section>Books Information
+        <section>
             <table class="table text-light mt-5">
 
                 <thead class="mt-5 text-center text-light">
@@ -27,7 +54,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <h2 class="table text-light mt-5">Availability</h2>
+                    <h2 class="table text-light mt-5">AAvailability</h2>
                     @foreach (var book in Model)
                     {
                         <tr>
@@ -35,8 +62,13 @@
                             <td>@book.Author</td>
                             <td>@book.Isbn</td>
                             <td>@book.Category</td>
-                            <td><button type="button" class="btn-danger me-3">Delete</button>
-                                <button type="button" class="btn-primary">Edit</button>
+                            <td>
+                                <form asp-action="ShowBooks" asp-controller="Book" method="post" style="display:inline;">
+                                    <input type="hidden" name="id" value="@book.Id" />
+                                    <button type="submit" class="btn btn-danger me-3 rounded-pill">Delete</button>
+                                </form>
+                                <a href="@Url.Action("Edit", "Book", new { id = book.Id })"
+                                    class="btn btn-primary rounded-pill">Edit</a>
                             </td>
                         </tr>
                     }
@@ -54,17 +86,23 @@
                 </thead>
                 <tbody>
                     <h2 class="table text-light mt-5">Loaned</h2>
-                    <tr>
-                        <td>El Alquimista</td>
-                        <td>Paulo Coelho</td>
-                        <td>0-306-40600-3</td>
-                        <td>Drama</td>
-                        <td><button type="button" class="btn-danger me-3">Delete</button>
-                            <button type="button" class="btn-primary">Edit</button>
-                        </td>
-                    </tr>
-
-                </tbody>
+                    @foreach (var book in Model)
+                    {
+                        <tr>
+                            <td>@book.Title</td>
+                            <td>@book.Author</td>
+                            <td>@book.Isbn</td>
+                            <td>@book.Category</td>
+                            <td>
+                                <form asp-action="ShowBooks" asp-controller="Book" method="post" style="display:inline;">
+                                    <input type="hidden" name="id" value="@book.Id" />
+                                    <button type="submit" class="btn btn-danger me-3 rounded-pill">Delete</button>
+                                </form>
+                                <a href="@Url.Action("Edit", "Book", new { id = book.Id })"
+                                    class="btn btn-primary rounded-pill">Edit</a>
+                            </td>
+                        </tr>
+                    }
             </table>
             <table class="table text-light mt-5">
                 <thead>
@@ -78,17 +116,23 @@
                 </thead>
                 <tbody>
                     <h2 class="tabletext-light mt-5">Requested</h2>
-                    <tr>
-                        <td>El Retrato de Dorian Grey</td>
-                        <td>Oscar Wilde</td>
-                        <td>0-306-45032-4</td>
-                        <td>Fiction</td>
-                        <td><button type="button" class="btn-danger me-3">Delete</button>
-                            <button type="button" class="btn-primary">Edit</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                    @foreach (var book in Model)
+                    {
+                        <tr>
+                            <td>@book.Title</td>
+                            <td>@book.Author</td>
+                            <td>@book.Isbn</td>
+                            <td>@book.Category</td>
+                            <td>
+                                <form asp-action="ShowBooks" asp-controller="Book" method="post" style="display:inline;">
+                                    <input type="hidden" name="id" value="@book.Id" />
+                                    <button type="submit" class="btn btn-danger me-3 rounded-pill">Delete</button>
+                                </form>
+                                <a href="@Url.Action("Edit", "Book", new { id = book.Id })"
+                                    class="btn btn-primary rounded-pill">Edit</a>
+                            </td>
+                        </tr>
+                    }
         </section>
     </main>
 </body>

@@ -13,11 +13,11 @@ namespace LibraryProject.Controllers
     [Route("[controller]")]
     public class BookController : Controller
     {
-        private readonly ILogger<PersonController> _logger;
+        private readonly ILogger<BookController> _logger;
         private readonly Bjijvrrjr8fpicdo4p4kContext _context;
 
 
-        public BookController(ILogger<PersonController> logger, Bjijvrrjr8fpicdo4p4kContext context)
+        public BookController(ILogger<BookController> logger, Bjijvrrjr8fpicdo4p4kContext context)
         {
             _context = context; // Obtener la referencia al contexto de datos
             _logger = logger;
@@ -56,12 +56,38 @@ namespace LibraryProject.Controllers
             return View(books);
         }
 
-        [HttpGet("AvailableBooks")]
-        public async Task<IActionResult> AvailableBooks()
+        // metodo eliminar en ShowBooks
+        [HttpPost("ShowBooks")]
+        public async Task<IActionResult> ShowBooks(int id)
         {
-            var books = await _context.Books.ToListAsync();
-            return View(books);
+            var book = await _context.Books.FindAsync(id);
+            if (book == null)
+            {
+                return NotFound();
+            }
+
+            _context.Books.Remove(book);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("ShowBooks");
         }
+
+        //metodo para eliminar en administrator
+        [HttpPost("Administrador")]
+        public async Task<IActionResult> Administrador(int id)
+        {
+            var book = await _context.Books.FindAsync(id);
+            if (book == null)
+            {
+                return NotFound();
+            }
+
+            _context.Books.Remove(book);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Administrador");
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
