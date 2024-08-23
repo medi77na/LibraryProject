@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap");
 
 /*Feunte del texto*/
+
 * {
   font-family: 'Familjen Grotesk', sans-serif;
 }
@@ -11,22 +12,20 @@
   --white: #ffffff;
   --black: #000000;
   --beige: #c69c69;
+  --beige: #c69c69;
   --blue: #396EEB;
   --green: #1fb264;
+  --red: #ff0000;
   --red: #ff0000;
 
 }
 
-<<<<<<< HEAD
 .back {
-  background-image: url('https://tse4.mm.bing.net/th?id=OIG2.svtMVCW7sziF4G0r_q0d&pid=ImgGn');
+  background-color: var(--black);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-=======
-
->>>>>>> e0ac24a4498f7bd1863fd31b96e080af37c01cea
 
 html {
   font-size: 14px;
@@ -37,6 +36,8 @@ html {
     font-size: 16px;
   }
 }
+
+
 
 .btn:focus,
 .btn:active:focus,
@@ -55,12 +56,21 @@ body {
   margin-bottom: 60px;
 }
 
-#navcolor{
-  background-color:#ECEBEA;
+#navcolor {
+  background-color: #ECEBEA;
 }
 /*Color del nav con desenfoque*/
 #navcolor {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(1px);
+}
+
+
+.novedades{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  text-align: center;
+  gap: 50px;
 }
