@@ -36,6 +36,8 @@ namespace LibraryProject.Controllers
             return View();
         }
 
+        
+
         [HttpGet("Register")]
         public IActionResult Register()
         {
@@ -51,6 +53,13 @@ namespace LibraryProject.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Login");
             }
+
+            var errors = ModelState.Values.SelectMany(v => v.Errors);
+            foreach (var error in errors)
+            {
+                Console.WriteLine(error.ErrorMessage); // Revisa el error en la consola o en el output
+            }
+
             return View(person);
         }
 
