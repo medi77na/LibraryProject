@@ -55,6 +55,14 @@ namespace LibraryProject.Controllers
             return View();
         }
 
+        [HttpGet("Administrator")]
+        public async Task<IActionResult> Administrator()
+        {
+            var books = await _context.Books.ToListAsync();
+            return View(books);
+        }
+
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

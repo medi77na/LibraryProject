@@ -4,27 +4,28 @@
     ViewData["Title"] = "Books";
 }
 
-<body class="mt-5 text-center ">
-    <header class="mt-5 text-center text-dark">
+<body class="mt-5 text-center back ">
+    <header class="mt-5 text-center text-light">
         <h1>STATE OF BOOKS</h1>
     </header>
-    <main class="mt-5 text-center text-dark">
+    <main class="mt-5 text-center text-light">
         <p>Below you will be able to see the current status of the books</p>
         <!--A continuación podrá ver el estado actual de los libros -->
         <a href="/">Home</a>
         <section>Books Information
-            <table class="table text-dark mt-5">
+            <table class="table text-light mt-5">
 
-                <thead class="mt-5 text-center text-dark">
+                <thead class="mt-5 text-center text-light">
                     <tr>
                         <th scope="col">TITLE</th>
                         <th scope="col">AUTHOR</th>
                         <th scope="col">ISBN</th>
                         <th scope="col">CATEGORY</th>
+                        <th scope="col">OPTIONS</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <h2 class="table text-dark mt-5">Availability</h2>
+                    <h2 class="table text-light mt-5">Availability</h2>
                     @foreach (var book in Model)
                     {
                         <tr>
@@ -32,49 +33,58 @@
                             <td>@book.Author</td>
                             <td>@book.Isbn</td>
                             <td>@book.Category</td>
+                            <td><button type="button" class="btn-danger me-3">Delete</button>
+                                <button type="button" class="btn-primary">Edit</button>
+                            </td>
                         </tr>
                     }
                 </tbody>
             </table>
-            <table class="table text-dark mt-5">
-                <thead class="mt-5 text-center text-dark">
+            <table class="table text-light mt-5">
+                <thead class="mt-5 text-center text-light">
                     <tr>
                         <th scope="col">TITLE</th>
                         <th scope="col">AUTHOR</th>
                         <th scope="col">ISBN</th>
                         <th scope="col">CATEGORY</th>
-
+                        <th scope="col">OPTIONS</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <h2 class="table text-dark mt-5">Loaned</h2>
+                    <h2 class="table text-light mt-5">Loaned</h2>
                     <tr>
                         <td>El Alquimista</td>
                         <td>Paulo Coelho</td>
                         <td>0-306-40600-3</td>
                         <td>Drama</td>
+                        <td><button type="button" class="btn-danger me-3">Delete</button>
+                            <button type="button" class="btn-primary">Edit</button>
+                        </td>
 
                     </tr>
 
                 </tbody>
             </table>
-            <table class="table text-dark mt-5">
+            <table class="table text-light mt-5">
                 <thead>
                     <tr>
                         <th scope="col">TITLE</th>
                         <th scope="col">AUTHOR</th>
                         <th scope="col">ISBN</th>
                         <th scope="col">CATEGORY</th>
-
+                        <th scope="col">OPTIONS</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <h2 class="table text-dark mt-5">Requested</h2>
+                    <h2 class="table text-light mt-5">Requested</h2>
                     <tr>
                         <td>El Retrato de Dorian Grey</td>
                         <td>Oscar Wilde</td>
                         <td>0-306-45032-4</td>
                         <td>Fiction</td>
+                        <td><button type="button" class="btn-danger me-3">Delete</button>
+                            <button type="button" class="btn-primary">Edit</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
