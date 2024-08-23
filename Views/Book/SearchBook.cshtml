@@ -31,13 +31,14 @@
 
     <div class="d-flex justify-content-center me-4 gap-3 mt-2 mb-2">
       <a href="~/Book/AvailableBooks" asp-append-version="true"><button type="button" class="btn btn-dark rounded-pill fs-5">Get out</button></a>
-      <a href="~/Book/HistoryBooksReserved" asp-append-version="true"><button type="button" class="btn btn-dark rounded-pill fs-5">History of borrowed</button></a>
+      <a href="~/Book/HistoryBooksReserved" asp-append-version="true"><button type="button" class="btn btn-dark rounded-pill fs-5">Books borrowed</button></a>
     </div>
   </header>
 
   <main>
-    <div class="input-group flex-nowrap mt-5">
-      <input type="text" class="form-control rounded-pill" placeholder="Enter the name of the book"
+    <h1 class="text-light fs-2 mt-5">Name Of Book:</h1>
+    <div class="input-group flex-nowrap">
+      <input type="text" class="form-control rounded-pill" placeholder="Enter the name of book"
         aria-label="Enter the name of the book" aria-describedby="addon-wrapping">
     </div>
 
@@ -53,6 +54,7 @@
             <p>9-123-569463210</p>
             <p>Category:</p>
             <p>Romance</p>
+            <button class="btn-danger">Unavailable</button>
           </div>
         </div>
       </div>
