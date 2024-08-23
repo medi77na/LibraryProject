@@ -137,11 +137,9 @@ public partial class Bjijvrrjr8fpicdo4p4kContext : DbContext
             entity.Property(e => e.TypeOfDocument)
                 .HasMaxLength(45)
                 .HasColumnName("type_of_document");
-
-            entity.HasOne(d => d.Roles).WithMany(p => p.People)
-                .HasForeignKey(d => d.RolesId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("fk_users_roles");
+            // entity.Property(e => e.RolesId)
+            //     .HasColumnType("int(11)")
+            //     .HasColumnName("roles_id");
         });
 
         modelBuilder.Entity<Role>(entity =>
